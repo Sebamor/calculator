@@ -1,0 +1,98 @@
+.container-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100dvh;
+  width: 100dwh;
+  background: rgb(190, 113, 113);
+  padding: 50px;
+}
+
+#calContainer {
+  background: rgb(209, 170, 96);
+  min-height: 100%;
+  border-radius: 15px;
+}
+#calContainer h1 {
+  padding-bottom: 50px;
+  color: white;
+}
+
+#calculator {
+  background: grey;
+  min-height: 500px;
+  min-width: 400px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#screen {
+  min-height: 80px;
+  min-width: 300px;
+  background: black;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.calcButtonRows {
+  min-width: 300px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calcButtons {
+  min-width: 70px;
+  max-height: 70px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=main.css.map */
