@@ -15,6 +15,7 @@ const multiplier = document.getElementById('multiply');
 const equals = document.getElementById('equals');
 const decimal = document.getElementById('decimal');
 const present = document.getElementById('present');
+const clear = document.getElementById('clear');
 
 
 function add(a, b) {
@@ -314,5 +315,10 @@ equals.addEventListener('click', () => {
     }
 })
 
-// TODO Add clear button
-// TODO Add equals turning final number into firstNum to then continue operations on number
+clear.addEventListener('click', () => {
+    firstNum = undefined;
+    secondNum = undefined;
+    endValue = undefined;
+    operators = undefined;
+    present.innerHTML = '';
+})

@@ -104,4 +104,9 @@ body {
   font-weight: 900;
 }
 
+#clear {
+  background: orange;
+  outline: none;
+}
+
 /*# sourceMappingURL=main.css.map */
