@@ -291,23 +291,27 @@ equals.addEventListener('click', () => {
 	if (operators === "+") {
         endValue = add(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
+        firstNum = endValue;
+        secondNum = undefined;
     }
     else if (operators === '-') {
         endValue = subtract(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
+        firstNum = endValue;
+        secondNum = undefined;
     }
     else if (operators === 'x') {
         endValue = multiply(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
+        firstNum = endValue;
+        secondNum = undefined;
     }
     else if (operators === '/') {
         endValue = divide(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
+        firstNum = endValue;
+        secondNum = undefined;
     }
-
-    firstNum = undefined;
-    secondNum = undefined;
-    operators = undefined;
 })
 
 // TODO Add clear button
