@@ -260,23 +260,31 @@ decimal.addEventListener('click', () => {
 })
 
 adder.addEventListener('click', () => {
-	operators = '+';
-    present.innerHTML = firstNum + operators;
+	if (!(firstNum === undefined)) {
+        operators = '+';
+        present.innerHTML = firstNum + operators;
+    }
 })
 
 subtracter.addEventListener('click', () => {
-	operators = '-';
-    present.innerHTML = firstNum + operators;
+	if (!(firstNum === undefined)) {
+        operators = '-';
+        present.innerHTML = firstNum + operators;
+    }
 })
 
 multiplier.addEventListener('click', () => {
-	operators = 'x';
-    present.innerHTML = firstNum + operators;
+	if ((firstNum === undefined)) {
+        operators = 'x';
+        present.innerHTML = firstNum + operators;
+    }
 })
 
 divider.addEventListener('click', () => {
-	operators = '/';
-    present.innerHTML = firstNum + operators;
+	if (!(firstNum === undefined)) {
+        operators = '/';
+        present.innerHTML = firstNum + operators;
+    }
 })
 
 equals.addEventListener('click', () => {
@@ -302,6 +310,5 @@ equals.addEventListener('click', () => {
     operators = undefined;
 })
 
-// TODO Fix operators starting undefined when clicked with no firstNum
 // TODO Add clear button
 // TODO Add equals turning final number into firstNum to then continue operations on number
