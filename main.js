@@ -7,6 +7,7 @@ const six = document.getElementById('six');
 const seven = document.getElementById('seven');
 const eight = document.getElementById('eight');
 const nine = document.getElementById('nine');
+const zero = document.getElementById('zero');
 const adder = document.getElementById('plus');
 const subtracter = document.getElementById('minus');
 const divider = document.getElementById('divide');
@@ -36,6 +37,26 @@ let firstNum;
 let secondNum;
 let operators;
 let endValue;
+
+zero.addEventListener('click', () => {
+	if (operators === undefined) {
+        if (firstNum === undefined) {
+            firstNum = '0';
+            present.innerHTML = firstNum;
+        } else {
+            firstNum += '0';
+            present.innerHTML = firstNum;
+        }
+    } else {
+        if (secondNum === undefined) {
+            secondNum = '0';
+            present.innerHTML = firstNum + operators + secondNum;
+        } else {
+            secondNum += '0';
+            present.innerHTML = firstNum + operators + secondNum;
+        }
+    }
+})
 
 one.addEventListener('click', () => {
 	if (operators === undefined) {
@@ -223,7 +244,7 @@ decimal.addEventListener('click', () => {
         if (firstNum === undefined) {
             firstNum = '0.';
             present.innerHTML = firstNum;
-        } else {
+        } else if (!firstNum.includes('.')){
             firstNum += '.';
             present.innerHTML = firstNum;
         }
@@ -231,7 +252,7 @@ decimal.addEventListener('click', () => {
         if (secondNum === undefined) {
             secondNum = '.';
             present.innerHTML = firstNum + operators + secondNum;
-        } else {
+        } else if (!secondNum.includes('.')) {
             secondNum += '.';
             present.innerHTML = firstNum + operators + secondNum;
         }
