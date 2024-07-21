@@ -12,6 +12,7 @@ const subtracter = document.getElementById('minus');
 const divider = document.getElementById('divide');
 const multiplier = document.getElementById('multiply');
 const equals = document.getElementById('equals');
+const decimal = document.getElementById('decimal');
 const present = document.getElementById('present');
 
 
@@ -217,6 +218,26 @@ nine.addEventListener('click', () => {
     }
 })
 
+decimal.addEventListener('click', () => {
+	if (operators === undefined) {
+        if (firstNum === undefined) {
+            firstNum = '0.';
+            present.innerHTML = firstNum;
+        } else {
+            firstNum += '.';
+            present.innerHTML = firstNum;
+        }
+    } else {
+        if (secondNum === undefined) {
+            secondNum = '.';
+            present.innerHTML = firstNum + operators + secondNum;
+        } else {
+            secondNum += '.';
+            present.innerHTML = firstNum + operators + secondNum;
+        }
+    }
+})
+
 adder.addEventListener('click', () => {
 	operators = '+';
     present.innerHTML = firstNum + operators;
@@ -239,19 +260,19 @@ divider.addEventListener('click', () => {
 
 equals.addEventListener('click', () => {
 	if (operators === "+") {
-        endValue = add(parseInt(firstNum), parseInt(secondNum));
+        endValue = add(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
     }
     else if (operators === '-') {
-        endValue = subtract(parseInt(firstNum), parseInt(secondNum));
+        endValue = subtract(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
     }
     else if (operators === 'x') {
-        endValue = multiply(parseInt(firstNum), parseInt(secondNum));
+        endValue = multiply(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
     }
     else if (operators === '/') {
-        endValue = divide(parseInt(firstNum), parseInt(secondNum));
+        endValue = divide(parseFloat(firstNum), parseFloat(secondNum));
         present.innerHTML = endValue;
     }
 
