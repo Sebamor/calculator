@@ -301,3 +301,7 @@ equals.addEventListener('click', () => {
     secondNum = undefined;
     operators = undefined;
 })
+
+// TODO Fix operators starting undefined when clicked with no firstNum
+// TODO Add clear button
+// TODO Add equals turning final number into firstNum to then continue operations on number
