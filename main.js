@@ -274,7 +274,7 @@ subtracter.addEventListener('click', () => {
 })
 
 multiplier.addEventListener('click', () => {
-	if ((firstNum === undefined)) {
+	if (!(firstNum === undefined)) {
         operators = 'x';
         present.innerHTML = firstNum + operators;
     }
