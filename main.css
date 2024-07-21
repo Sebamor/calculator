@@ -35,6 +35,14 @@ img {
   height: auto;
 }
 
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  outline: none;
+}
+
 body {
   height: 100dvh;
   width: 100dwh;
@@ -62,7 +70,7 @@ body {
   justify-content: space-around;
 }
 
-#screen {
+#present {
   min-height: 80px;
   min-width: 300px;
   background: black;
@@ -73,6 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  font-weight: 700;
 }
 
 .calcButtonRows {
