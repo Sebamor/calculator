@@ -251,7 +251,7 @@ decimal.addEventListener('click', () => {
         }
     } else {
         if (secondNum === undefined) {
-            secondNum = '.';
+            secondNum = '0.';
             present.innerHTML = firstNum + operators + secondNum;
         } else if (!secondNum.includes('.')) {
             secondNum += '.';
