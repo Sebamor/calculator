@@ -102,6 +102,7 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 900;
+  border: none;
 }
 
 #clear {
